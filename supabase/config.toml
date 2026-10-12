@@ -1,0 +1,6 @@
+# Edge Function gateway configuration.
+# JWT verification is done inside handler.js with auth.getUser() + is_admin().
+# Disabling gateway verification prevents preflight/legacy JWT validation from blocking CORS before our handler runs.
+
+[functions.photographer-account]
+verify_jwt = false
